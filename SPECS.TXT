@@ -1,0 +1,57 @@
+Create a To-Do List Program
+
+Support 4 Kinds of Tasks
+
+Generic- these contains description and a due date.
+Shopping - this contains a list of items to be purchased
+Event - contains a location and time
+Homework - class subject associated with it
+
+User interactions
+____________________
+
+ADD - creates a new task. All new tasks are outstanding. User specifies
+task type, due date, and description as well as any extra info needed.
+
+PRINT - Display a list of ALL outstanding tasks IN ORDER OF DUE DATE
+If multiples share the same date, display in alphabetical order. Each task on its own line followed by its due date, type, and description. If no outstanding tasks, tell user.
+
+DETAILED - Like print, but more info. Includes Where/When for Events, Subject for HW, and Items for Shopping. Same parameters for PRINT, including telling user if not asks remain.
+
+REMOVE - Deletes an existing outstanding task. User specifies the task number to remove as it appears in the lists of PRINT/DETAILED commands. If no outstanding tasks, tell user.
+
+COMPLETE - This command marks a task as complete. User specifies the task number in the PRINT/DETAILED list. If no outstanding, tell user.
+
+COMPLETED - This command displays all completed tasks. Follows same format as PRINT command. If none completed, tell user.
+
+SAVE - Saves all outstanding tasks to a file. User specifies the name of the file to create, if file w/name exists - overwrite it. Contents of the saved file match format 
+
+LOAD - load the SAVE file. if there are tasks in the list before LOAD, it will be cleared. 
+
+EXIT - exit program.
+
+TASK FILE FORMAT
+
+Tasks file has single task on every line. Each component of a task
+separated by a pipe ("|") and is ordered as follows:
+TYPE | DUE DATE | DESCRIPTION | ADDITIONAL SPECIALIZED INFO
+
+G|04/10/2016|Put away fans, bring out heaters
+S|04/20/2016|SHOPPING DAY @ MANHATTAN MALL|SOCKS|3 SWEATS|DESERT BOOTS
+E|03/12/2017|NETWORKING EVENT|HUDSON TERRACE|8 PM
+H|03/20/2017|HOMEWORK|AFPRL 100
+
+Errors
+Never assume proper user input. 
+
+Design:
+_______________
+Must create a SortedLinkList class to store tasks.
+Create a struct or class to represent a date, structure will need a few 
+operators overloaded 
+
+Data Types Needed for Tasks
+
+Char (Task Type)/3 INTs (Dates)/String for Description
+
+String for Location/INT for Time/String for Shopping Items/String for Class Subject 
