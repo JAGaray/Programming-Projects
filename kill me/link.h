@@ -10,7 +10,7 @@ class Node {
 
  private:
   std::string name;
-  Node* next;
+  Node* next = NULL;
 };
 
 #endif
