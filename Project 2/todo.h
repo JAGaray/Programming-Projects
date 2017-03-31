@@ -26,15 +26,6 @@ class LinkedList {
    void addTask();
    void removeTask();
    void completeTask();
-   void printTasks();
-   void printDetailed();
-   void printCompleted();
-   void sortList();
-   void TaskErrorCheck(const char);
-   void YearErrorCheck(const int);
-   void MonthErrorCheck(const int);
-   void DaysInMonthErrorCheck(const int, const int);
-
 
  private:
    Node *head, *tail; //Node pointers to Head and Tail
@@ -42,3 +33,4 @@ class LinkedList {
 } TaskList;
 
 #endif
+
