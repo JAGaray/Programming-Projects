@@ -10,6 +10,4 @@ int main() {
   cin >> name;
   Node* next;
   Node A(name, next);
-
-
 }
