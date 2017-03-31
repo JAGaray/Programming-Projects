@@ -18,23 +18,24 @@ void LinkedList::printTasks() {
 }
 
 void LinkedList::addTask() {
+
 	Node* temp;
 	temp = new Node;
 
 	std::cout << "What type of task would you like to add? (G/S/E/H) " << std::endl;
 	std::cin >> TaskList.head->TaskType;
-	TaskList.TaskErrorCheck(TaskList.head->TaskType);
-	if (Node.TaskType = 'G') {
+	//TaskList.TaskErrorCheck(TaskList.head->TaskType);
+	if (Link.TaskType == "G'" || "g") {
 		std::cout << "What year is the task due? Please enter a number." << std::endl;
 		std::cin >> TaskList.head->year;
 	}
-		TaskList.YearErrorCheck(TaskList.head->year);
+		//TaskList.YearErrorCheck(TaskList.head->year);
 		std::cout << "What month is the task due? " << std::endl;
 		std::cin >> TaskList.head->month;
-		TaskList.MonthErrorCheck(TaskList.head->month);
+		//TaskList.MonthErrorCheck(TaskList.head->month);
 		std::cout << "What day is the task due? " << std::endl;
 		std::cin >> TaskList.head->day;
-		TaskList.DaysInMonthErrorCheck(TaskList.head->day, TaskList.head->month);
+		//TaskList.DaysInMonthErrorCheck(TaskList.head->day, TaskList.head->month);
 }
 /*
 void LinkedList::TaskErrorCheck(const char) {

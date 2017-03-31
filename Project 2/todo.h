@@ -5,7 +5,7 @@
 
 class Node {
  public:
-   	char TaskType;
+   	std::string TaskType;
    	int month;
    	int day;
    	int year;
@@ -17,7 +17,7 @@ class Node {
    	std::string Subject;
 
    	Node *next, *prev;
-};
+}Link;
 
 class LinkedList {
  public:
