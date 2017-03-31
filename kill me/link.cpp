@@ -4,3 +4,5 @@
 Node::Node(std::string name, Node* next):name(name), next(next) {
 
 }
+
+Node::~Node(){}
