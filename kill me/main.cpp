@@ -8,6 +8,8 @@ int main() {
   string name;
   cout << "Enter a name. " << endl;
   cin >> name;
-  Node A(name);
-  Node B(name, &A);
+  Node* a = new Node(name);
+  Node* b = new Node(name, a);
+
+  return 0;
 }

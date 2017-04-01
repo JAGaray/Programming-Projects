@@ -5,7 +5,7 @@
 
 class Node {
  public:
-  Node(std::string name, Node* next = NULL);
+  Node(std::string, Node* next = NULL);
   ~Node();
 
  private:
