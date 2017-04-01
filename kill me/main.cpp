@@ -26,9 +26,13 @@ int main() {
     //new node to end
   Node* e = new Node("fuego");
   b->next->next->next = e;
+//new node F
+  Node* f = new Node("pescado");
+  b->next->next->next->next = f;
 
   cout << b->name << " " << b->next->name << " " << b->next->next->name
-  	   << " " << b->next->next->name << endl;
+  	   << " " << b->next->next->next->name << " " <<
+  	   b->next->next->next->next->name << endl;
 
 
   return 0;
