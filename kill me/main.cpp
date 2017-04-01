@@ -30,10 +30,13 @@ int main() {
   Node* f = new Node("pescado");
   b->next->next->next->next = f;
 
+  //node G
+  Node* g = new Node("no homo");
+  b->next->next->next->next->next = g;
+
   cout << b->name << " " << b->next->name << " " << b->next->next->name
   	   << " " << b->next->next->next->name << " " <<
-  	   b->next->next->next->next->name << endl;
-
-
+  	   b->next->next->next->next->name << " " <<
+  	   b->next->next->next->next->next->name << endl;
   return 0;
 }
