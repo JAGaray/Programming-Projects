@@ -13,11 +13,15 @@ int main() {
   Node* c = new Node("sup");
   Node* d = new Node("kuday");
 
+  Node* temp;
+  temp = b->next->next;
   b->next->next = d;
-  d->next = c;
+  d->next = temp;
+  delete temp;
 
-  cout << b->name << " " << b->next->name << " " << b->next->next->name 
-  	   << " " << b->next->next->next->name << endl;
+  cout << b->name << " " << b->next->name << " " << b->next->next->name
+  	   << " " << b->next->next->name << endl;
+
 
   return 0;
 }
