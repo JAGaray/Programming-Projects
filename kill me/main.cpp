@@ -17,7 +17,6 @@ int main() {
   temp = b->next->next;
   b->next->next = d;
   d->next = temp;
-  delete temp;
 
   cout << b->name << " " << b->next->name << " " << b->next->next->name
   	   << " " << b->next->next->name << endl;
