@@ -9,4 +9,5 @@ int main() {
   cout << "Enter a name. " << endl;
   cin >> name;
   Node A(name);
+  Node B(name, &A);
 }
