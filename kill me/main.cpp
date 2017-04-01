@@ -13,6 +13,7 @@ int main() {
   Node* c = new Node("sup");
   Node* d = new Node("kuday");
 
+  b->next->next = c;
   Node* temp;
   temp = b->next->next;
   b->next->next = d;
