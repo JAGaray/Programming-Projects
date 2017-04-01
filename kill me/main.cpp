@@ -33,10 +33,15 @@ int main() {
   //node G
   Node* g = new Node("no homo");
   b->next->next->next->next->next = g;
+  //node H
+  Node* h = new Node("fuck dominos");
+  b->next->next->next->next->next->next = h;
 
   cout << b->name << " " << b->next->name << " " << b->next->next->name
   	   << " " << b->next->next->next->name << " " <<
   	   b->next->next->next->next->name << " " <<
-  	   b->next->next->next->next->next->name << endl;
+  	   b->next->next->next->next->next->name <<
+  	   " " << b->next->next->next->next->next->next->name << endl;
+  
   return 0;
 }
