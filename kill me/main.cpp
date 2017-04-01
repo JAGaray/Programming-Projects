@@ -10,9 +10,7 @@ int main() {
   cin >> name;
   Node* a = new Node(name);
   Node* b = new Node("Ayo", a);
-  cout << b->name << endl;
-  b->name = a->name;
-  cout << b->name << endl;
+  cout << b->next->name << endl;
 
   return 0;
 }
