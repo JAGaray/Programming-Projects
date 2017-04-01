@@ -11,10 +11,13 @@ int main() {
   Node* a = new Node(name);
   Node* b = new Node("Ayo", a);
   Node* c = new Node("sup");
+  Node* d = new Node("kuday");
 
-  b->next->next = c;
+  b->next->next = d;
+  d->next = c;
 
-  cout << b->name << " " << b->next->name << " " << b->next->next->name << endl;
+  cout << b->name << " " << b->next->name << " " << b->next->next->name 
+  	   << " " << b->next->next->next->name << endl;
 
   return 0;
 }
