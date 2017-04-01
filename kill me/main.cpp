@@ -9,7 +9,7 @@ int main() {
   cout << "Enter a name. " << endl;
   cin >> name;
   Node* a = new Node(name);
-  Node* b = new Node(name, a);
+  Node* b = new Node("Ayo", a);
 
   return 0;
 }
