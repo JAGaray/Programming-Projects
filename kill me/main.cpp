@@ -20,8 +20,8 @@ int main() {
   d->next = temp;
 
   temp = b->next;
+  delete b->next;
   b->next = b->next->next;
-  delete a;
 
   cout << b->name << " " << b->next->name << " " << b->next->next->name
   	   << " " /*<< b->next->next->name*/ << endl;
