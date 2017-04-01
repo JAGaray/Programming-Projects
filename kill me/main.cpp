@@ -14,5 +14,7 @@ int main() {
 
   b->next->next = c;
 
+  cout << b->name << " " << b->next->name << " " << b->next->next->name << endl;
+
   return 0;
 }
