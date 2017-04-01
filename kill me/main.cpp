@@ -8,6 +8,5 @@ int main() {
   string name;
   cout << "Enter a name. " << endl;
   cin >> name;
-  Node* next;
-  Node A(name, next);
+  Node A(name);
 }
