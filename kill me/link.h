@@ -7,10 +7,9 @@ class Node {
  public:
   Node(std::string, Node* next = NULL);
   ~Node();
-
- private:
   std::string name;
   Node* next;
+ private:
 };
 
 #endif
