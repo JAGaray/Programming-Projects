@@ -23,8 +23,12 @@ int main() {
   delete b->next;
   b->next = b->next->next;
 
+    //new node to end
+  Node* e = new Node("fuego");
+  b->next->next->next = e;
+
   cout << b->name << " " << b->next->name << " " << b->next->next->name
-  	   << " " /*<< b->next->next->name*/ << endl;
+  	   << " " << b->next->next->name << endl;
 
 
   return 0;
