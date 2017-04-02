@@ -5,6 +5,8 @@
 struct Node {
   Node* next;
   std::string taskType;
+  Node(std::string taskType);
+  std::string getTaskType();
 };
 
 class LinkedList {
@@ -13,6 +15,7 @@ class LinkedList {
  	~LinkedList();
     void insertNode(Node* userNode);
  	void removeNode(unsigned int n);
+ 	void addtoTail(Node*);
  	Node* head;
 };
 

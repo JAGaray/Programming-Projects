@@ -1,5 +1,12 @@
 #include "linklist.h"
 
+Node::Node(std::string taskType) {}
+
+std::string Node::getTaskType() {
+    std::cin >> taskType;
+    return taskType;
+}
+
 LinkedList::LinkedList(Node* head = NULL) {}
 
 LinkedList::~LinkedList() {}
@@ -31,5 +38,17 @@ void LinkedList::removeNode(unsigned int n) {
 	}
 	prev->next = curr->next;
 	delete curr;
+}
+
+void LinkedList::addtoTail(Node* tobeAdded) {
+  if (head == NULL) {
+    head = tobeAdded;
+  } else {
+      tobeAdded = head;
+      while (tobeAdded->next != NULL) {
+        tobeAdded = tobeAdded->next;
+      }
+
+    }
 }
 
