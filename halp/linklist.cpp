@@ -40,9 +40,10 @@ void LinkedList::removeNode(unsigned int n) {
 	delete curr;
 }
 
-void LinkedList::addtoTail(std::string typeTask) {
+void LinkedList::addtoTail(std::string taskType) {
   if (head == NULL) {
-    head = new Node(typeTask);
+    Node* newHead;
+    newHead->taskType = taskType;
   }
 }
 
