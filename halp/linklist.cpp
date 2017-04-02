@@ -1,6 +1,6 @@
 #include "linklist.h"
 
-LinkedList::LinkedList(std::string name, Node* next = NULL) {}
+LinkedList::LinkedList(std::string name, Node* head = NULL) {}
 
 LinkedList::~LinkedList() {}
 
