@@ -4,13 +4,14 @@
 
 struct Node {
   Node* next;
-  Task task;
 };
 
 class LinkedList {
  public:
- 	LinkedList(Node* next);
+ 	LinkedList(std::string name, Node* next);
  	~LinkedList();
+    void insertNode(Node* head, Node* next);
+ 	void removeNode(unsigned int n);
  	Node* head;
 };
 
@@ -28,8 +29,6 @@ class TaskLinkedList {
  public:
  	TaskLinkedList();
  	~TaskLinkedList();
- 	void insertNode(Node* head);
- 	void removeNode(unsigned int n);
 };
 
 #endif

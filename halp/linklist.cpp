@@ -1,6 +1,6 @@
 #include "linklist.h"
 
-LinkedList::LinkedList(Node* next = NULL) {}
+LinkedList::LinkedList(std::string name, Node* next = NULL) {}
 
 LinkedList::~LinkedList() {}
 
@@ -15,22 +15,22 @@ TaskLinkedList::TaskLinkedList() {}
 
 TaskLinkedList::~TaskLinkedList() {}
 
-void TaskLinkedList::insertNode(Node* head) {
+void LinkedList::insertNode(Node* head, Node* next) {
   Node* prev = new Node;
-  if(head == NULL || head->date >= current->date) {
-  	current->next = head;
-  	head = current;
+  if(head == NULL) {
+  	next->next = head;
+  	head = next;
   } else {
   	  prev = head;
-      while(prev->next != NULL && prev->next->data < current->data) {
+      while(prev->next != NULL) {
   	    prev = prev->next;
   		}
-  		current->next = prev->next;
-			prev->next = current;
+  		next->next = prev->next;
+			prev->next = next;
 	}
 }
 
-TaskLinkedList::void removeNode(unsigned int n) {
+void LinkedList::removeNode(unsigned int n) {
 	Node* prev = new Node();
 	Node* curr = new Node();
 	curr = head;
@@ -42,8 +42,7 @@ TaskLinkedList::void removeNode(unsigned int n) {
     curr = curr->next;
 	}
 	prev->next = curr->next;
-	delete curr->date;
+	delete curr->next;
 	delete curr;
-	}
-
 }
+
