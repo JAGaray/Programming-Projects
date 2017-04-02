@@ -43,12 +43,6 @@ void LinkedList::removeNode(unsigned int n) {
 void LinkedList::addtoTail(Node* tobeAdded) {
   if (head == NULL) {
     head = tobeAdded;
-  } else {
-      tobeAdded = head;
-      while (tobeAdded->next != NULL) {
-        tobeAdded = tobeAdded->next;
-      }
-
-    }
+  }
 }
 
