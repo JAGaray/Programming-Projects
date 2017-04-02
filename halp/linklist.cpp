@@ -2,10 +2,10 @@
 
 Node::Node(std::string taskType) {}
 
-std::string Node::getTaskType() {
-    std::cin >> taskType;
-    return taskType;
-}
+//std::string Node::getTaskType() {
+//    std::cin >> taskType;
+  //  return taskType;
+//}
 
 LinkedList::LinkedList(Node* head = NULL) {}
 
@@ -40,9 +40,9 @@ void LinkedList::removeNode(unsigned int n) {
 	delete curr;
 }
 
-void LinkedList::addtoTail(Node* tobeAdded) {
+void LinkedList::addtoTail(std::string typeTask) {
   if (head == NULL) {
-    head = tobeAdded;
+    head = new Node(typeTask);
   }
 }
 
