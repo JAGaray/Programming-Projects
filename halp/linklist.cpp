@@ -7,7 +7,7 @@ Node::Node(std::string taskType) {}
   //  return taskType;
 //}
 
-LinkedList::LinkedList(Node* head = NULL) {}
+LinkedList::LinkedList(Node* head = NULL):head(head) {}
 
 LinkedList::~LinkedList() {}
 
@@ -50,5 +50,6 @@ void LinkedList::addtoTail(std::string taskType) {
 void LinkedList::printList() {
     if(head != NULL)
         std::cout << head->taskType << std::endl;
+
 }
 
