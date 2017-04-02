@@ -4,10 +4,10 @@ LinkedList::LinkedList(Node* next = NULL) {}
 
 LinkedList::~LinkedList() {}
 
-Task::Task(std::type) {}
+Task::Task(std::string type) {}
 
 Task::~Task() {}
-Task::bool completed(std::type, std::date, std::description) {
+bool Task::completed() {
 
 }
 
@@ -15,7 +15,7 @@ TaskLinkedList::TaskLinkedList() {}
 
 TaskLinkedList::~TaskLinkedList() {}
 
-TaskLinkedList::void insertNode(Node* head, Node* current) {
+void TaskLinkedList::insertNode(Node* head) {
   Node* prev = new Node;
   if(head == NULL || head->date >= current->date) {
   	current->next = head;
@@ -31,12 +31,12 @@ TaskLinkedList::void insertNode(Node* head, Node* current) {
 }
 
 TaskLinkedList::void removeNode(unsigned int n) {
-	Node* prev = new Node(); 
+	Node* prev = new Node();
 	Node* curr = new Node();
 	curr = head;
 	if (head == NULL) {
-		cout << "Error. List is empty. " << endl;
-	} 
+		std::cout << "Error. List is empty. " << std::endl;
+	}
 	for (int i = 0; i < (n-1); ++i) {
     prev = curr;
     curr = curr->next;

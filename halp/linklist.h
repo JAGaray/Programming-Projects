@@ -4,7 +4,7 @@
 
 struct Node {
   Node* next;
-  task;
+  Task task;
 };
 
 class LinkedList {
@@ -16,19 +16,19 @@ class LinkedList {
 
 class Task {
  public:
- 	Task(std::type);
+ 	Task(std::string type);
  	~Task();
- 	std::type;
+ 	std::string type;
 	std::string date;
 	std::string description;
 	bool completed();
-}task;
+};
 
 class TaskLinkedList {
  public:
  	TaskLinkedList();
  	~TaskLinkedList();
- 	void insertNode();
+ 	void insertNode(Node* head);
  	void removeNode(unsigned int n);
 };
 
