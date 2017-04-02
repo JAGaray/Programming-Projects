@@ -30,23 +30,20 @@ TaskLinkedList::void insertNode(Node* head, Node* current) {
 	}
 }
 
-TaskLinkedList::void removeNode(Node* head, Node* current) {
-	Node* prev = new Node;
+TaskLinkedList::void removeNode(unsigned int n) {
+	Node* prev = new Node(); 
+	Node* curr = new Node();
+	curr = head;
 	if (head == NULL) {
 		cout << "Error. List is empty. " << endl;
 	} 
-	if (head->date == current->date) {
-		prev = head->next;
-		
-		head = prev->next;
-	} else {
-		prev = head;
-		while(prev->next != NULL && prev->date )
+	for (int i = 0; i < (n-1); ++i) {
+    prev = curr;
+    curr = curr->next;
 	}
-
-
-	}
-
+	prev->next = curr->next;
+	delete curr->date;
+	delete curr;
 	}
 
 }

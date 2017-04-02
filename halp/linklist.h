@@ -29,7 +29,7 @@ class TaskLinkedList {
  	TaskLinkedList();
  	~TaskLinkedList();
  	void insertNode();
- 	void removeNode();
+ 	void removeNode(unsigned int n);
 };
 
 #endif
