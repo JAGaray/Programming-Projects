@@ -4,6 +4,7 @@
 
 struct Node {
   Node* next;
+  std::string taskType;
 };
 
 class LinkedList {

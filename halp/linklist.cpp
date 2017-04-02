@@ -1,7 +1,5 @@
 #include "linklist.h"
 
-Node::Node(Task* tool);
-
 LinkedList::LinkedList(Node* head = NULL) {}
 
 LinkedList::~LinkedList() {}
