@@ -4,32 +4,15 @@
 
 struct Node {
   Node* next;
-  Task* tool;
 };
 
 class LinkedList {
  public:
  	LinkedList(Node* head);
  	~LinkedList();
-    void insertNode(Node* head, Node* next);
+    void insertNode(Node* userNode);
  	void removeNode(unsigned int n);
  	Node* head;
-};
-
-class Task {
- public:
- 	Task(std::string type);
- 	~Task();
- 	std::string type;
-	std::string date;
-	std::string description;
-	bool completed();
-}tool;
-
-class TaskLinkedList {
- public:
- 	TaskLinkedList();
- 	~TaskLinkedList();
 };
 
 #endif
