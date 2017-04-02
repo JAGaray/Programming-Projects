@@ -46,3 +46,8 @@ void LinkedList::addtoTail(Node* tobeAdded) {
   }
 }
 
+void LinkedList::printList() {
+    if(head != NULL)
+        std::cout << head->taskType << std::endl;
+}
+

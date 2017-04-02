@@ -16,6 +16,7 @@ class LinkedList {
     void insertNode(Node* userNode);
  	void removeNode(unsigned int n);
  	void addtoTail(Node*);
+ 	void printList();
  	Node* head;
 };
 
