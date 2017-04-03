@@ -1,7 +1,10 @@
 #include "linklist.h"
+#include <string>
+#include <iostream>
 
 Node::Node(std::string taskType) {
     this->taskType = taskType;
+	this->next = NULL;
 }
 
 //std::string Node::getTaskType() {
@@ -9,7 +12,7 @@ Node::Node(std::string taskType) {
   //  return taskType;
 //}
 
-LinkedList::LinkedList(Node* head = NULL):head(head) {}
+LinkedList::LinkedList():head(NULL) {}
 
 LinkedList::~LinkedList() {}
 
@@ -43,11 +46,41 @@ void LinkedList::removeNode(unsigned int n) {
 }
 
 void LinkedList::addtoTail(std::string taskType) {
-  if (head == NULL) {
-    Node* newHead = new Node(taskType);
-    this->head = newHead;
-    //newHead->taskType = taskType;
-  }
+	if (head == NULL) {
+		Node* newHead = new Node(taskType);
+		this->head = newHead;
+		//newHead->taskType = taskType;
+	}
+	else {
+		Node* local = head;
+		Node* prev = NULL;
+		while (local != NULL) {
+			//prev = local;
+			if (taskType.compare(local->taskType) <= 0) {
+				Node* newNode = new Node(taskType);
+				//if (prev != NULL) {
+				//	newNode->next = prev;
+				//}
+				//prev->next = newNode
+				prev = local;
+				local = newNode;
+				local->next = prev;
+				break;
+			}
+			else if (local->next == NULL) {
+				Node* newNode = new Node(taskType);
+				local->next = newNode;
+				break;
+			}
+			else {
+				local = local->next;
+			}
+			//prev = local;
+			//local = local->next;
+			//Node* newNode = new Node(taskType);
+			//local->next = newNode;
+		}
+	}
 }
 
 void LinkedList::printList() {

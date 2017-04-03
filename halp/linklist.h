@@ -1,6 +1,7 @@
 #ifndef LINKLIST_H_
 #define LINKLIST_H_
 #include <iostream>
+#include <string>
 
 struct Node {
   Node* next;
@@ -10,7 +11,7 @@ struct Node {
 
 class LinkedList {
  public:
- 	LinkedList(Node* head);
+ 	LinkedList();
  	~LinkedList();
     void insertNode(Node* userNode);
  	void removeNode(unsigned int n);
